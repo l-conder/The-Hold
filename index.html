@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Hold - talk to the mentor before you respond</title>
+  <style>
+    :root {
+      --bg: #111111;
+      --panel: #191919;
+      --panel-2: #202020;
+      --ink: #f1eee8;
+      --muted: #b4aea4;
+      --faint: #736d64;
+      --line: #34312d;
+      --accent: #d9893d;
+      --accent-2: #6fb4a8;
+      --danger: #ce6d5f;
+      --shadow: rgba(0, 0, 0, 0.38);
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --serif: Georgia, "Times New Roman", serif;
+      --mono: "SF Mono", "Cascadia Code", Consolas, monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        linear-gradient(180deg, rgba(217, 137, 61, 0.08), transparent 360px),
+        var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .wrap {
+      width: min(1060px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .hero {
+      min-height: 92vh;
+      display: grid;
+      align-items: center;
+      padding: 56px 0 24px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.03fr) minmax(320px, 0.97fr);
+      gap: 56px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(44px, 7vw, 86px);
+      line-height: 0.95;
+      font-weight: 400;
+      margin: 0 0 24px;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 570px;
+      color: var(--muted);
+      font-size: clamp(18px, 2vw, 22px);
+      margin: 0 0 32px;
+    }
+
+    .primary-line {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--ink);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 14px 0;
+      font-family: var(--mono);
+      font-size: 13px;
+    }
+
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: var(--accent-2);
+      box-shadow: 0 0 18px rgba(111, 180, 168, 0.5);
+    }
+
+    .message {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 24px 70px var(--shadow);
+      overflow: hidden;
+    }
+
+    .message-top {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px;
+      background: var(--panel-2);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #314f5d;
+      color: #dce9ec;
+      font-weight: 700;
+      flex: 0 0 auto;
+    }
+
+    .from {
+      font-weight: 700;
+    }
+
+    .time {
+      color: var(--faint);
+      font-size: 13px;
+    }
+
+    .message-body {
+      padding: 24px;
+      font-family: var(--mono);
+      color: var(--ink);
+      font-size: 15px;
+    }
+
+    .stress {
+      color: var(--accent);
+    }
+
+    .timer {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .timer strong {
+      color: var(--accent);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .call {
+      padding: 72px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: #151515;
+    }
+
+    .call-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(280px, 1.1fr);
+      gap: 34px;
+      align-items: center;
+    }
+
+    h2 {
+      font-family: var(--serif);
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.05;
+      font-weight: 400;
+      margin: 0 0 16px;
+      letter-spacing: 0;
+    }
+
+    .section-copy {
+      color: var(--muted);
+      margin: 0;
+      max-width: 560px;
+      font-size: 17px;
+    }
+
+    .widget-box {
+      min-height: 116px;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .hint {
+      color: var(--faint);
+      font-size: 13px;
+      margin-top: 14px;
+      text-align: center;
+    }
+
+    .compare {
+      padding: 82px 0;
+    }
+
+    .compare-head {
+      max-width: 680px;
+      margin-bottom: 34px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 24px;
+      min-height: 100%;
+    }
+
+    .card.after {
+      border-color: rgba(111, 180, 168, 0.65);
+    }
+
+    .tag {
+      font-family: var(--mono);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--faint);
+      margin-bottom: 18px;
+    }
+
+    .after .tag {
+      color: var(--accent-2);
+    }
+
+    .reply {
+      font-size: 17px;
+      margin-bottom: 18px;
+    }
+
+    .why {
+      border-top: 1px solid var(--line);
+      padding-top: 16px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .method {
+      padding: 82px 0;
+      background: #f1eee8;
+      color: #191919;
+    }
+
+    .method .eyebrow {
+      color: #8b5425;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .step {
+      border: 1px solid #d4ccc0;
+      border-radius: 8px;
+      padding: 20px;
+      background: #fbf8f1;
+    }
+
+    .num {
+      font-family: var(--mono);
+      color: #8b5425;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    .step h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .step p {
+      margin: 0;
+      color: #5f574e;
+    }
+
+    .close {
+      padding: 76px 0;
+      text-align: center;
+    }
+
+    .close p {
+      margin: 0 auto 22px;
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      font-family: var(--mono);
+      font-size: 14px;
+    }
+
+    .button:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 28px 0;
+      color: var(--faint);
+      font-family: var(--mono);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    @media (max-width: 820px) {
+      .hero {
+        min-height: auto;
+        padding: 56px 0;
+      }
+
+      .hero-grid,
+      .call-grid,
+      .cards,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-grid {
+        gap: 34px;
+      }
+
+      .call,
+      .compare,
+      .method,
+      .close {
+        padding: 56px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .wrap {
+        width: min(100% - 28px, 1060px);
+      }
+
+      .message-body,
+      .card,
+      .step {
+        padding: 18px;
+      }
+
+      .primary-line {
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">The Hold</div>
+          <h1>Talk to the mentor before you respond.</h1>
+          <p class="lead">For freelancers staring at a friendly client message that asks for more than was agreed.</p>
+          <div class="primary-line"><span class="dot"></span><span>No scripts until the real fear is named.</span></div>
+        </div>
+
+        <div>
+          <article class="message" aria-label="Example client message">
+            <div class="message-top">
+              <div class="avatar">DR</div>
+              <div>
+                <div class="from">Diana R. / Northgate Studio</div>
+                <div class="time">today, 9:47 PM</div>
+              </div>
+            </div>
+            <div class="message-body">
+              Hey, quick one. <span class="stress">Before we launch Thursday</span> can you also wire up the analytics dashboard we talked about? Shouldn't be much since you're already in there. <span class="stress">Really need this to go smooth.</span> Thanks!
+            </div>
+          </article>
+          <div class="timer">They're 60% of your revenue. You have <strong id="clock">19:58</strong> before silence starts to feel like an answer.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="call" id="call">
+      <div class="wrap call-grid">
+        <div>
+          <div class="eyebrow">Voice mentor</div>
+          <h2>Do not reply yet.</h2>
+          <p class="section-copy">Bring the real message. The mentor will ask what was agreed, what is being asked now, and what you are afraid will happen if you hold the line.</p>
+        </div>
+        <div>
+          <div class="widget-box">
+            <elevenlabs-convai agent-id="agent_3201ksbdmr6gf499zw8s4q0srvwr"></elevenlabs-convai>
+          </div>
+          <div class="hint">Tap the voice widget and bring it the client message before you respond.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="compare">
+      <div class="wrap">
+        <div class="compare-head">
+          <div class="eyebrow">The difference</div>
+          <h2>Same client message. Two replies.</h2>
+          <p class="section-copy">One is written from inside the client's urgency. One is written after naming the fear underneath the yes.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <div class="tag">Before</div>
+            <div class="reply">"Yeah no problem, I can get the dashboard in before Thursday. Might be a little tight but I'll make it work."</div>
+            <div class="why">The freelancer absorbed the client's deadline panic and turned it into unpaid work, a harder launch, and a precedent.</div>
+          </article>
+
+          <article class="card after">
+            <div class="tag">After The Hold</div>
+            <div class="reply">"Happy to build the analytics dashboard. That is separate from the Thursday launch scope, so the clean move is for me to price it and slot it right after launch. That keeps Thursday focused and gets the dashboard done properly."</div>
+            <div class="why">The fear was being replaced for being difficult. Once named, the response could stay warm without giving away the work.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="method">
+      <div class="wrap">
+        <div class="eyebrow">The method</div>
+        <h2>The mentor asks three questions before it gives you words.</h2>
+        <div class="steps">
+          <article class="step">
+            <div class="num">01</div>
+            <h3>What was agreed?</h3>
+            <p>Find the actual promise before reacting to the new pressure.</p>
+          </article>
+
+          <article class="step">
+            <div class="num">02</div>
+            <h3>What is being asked?</h3>
+            <p>Separate the work itself from urgency, flattery, panic, or assumption.</p>
+          </article>
+
+          <article class="step">
+            <div class="num">03</div>
+            <h3>What are you afraid of?</h3>
+            <p>Name the consequence you are trying to avoid before you write from inside it.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="close">
+      <div class="wrap">
+        <h2>Keep the mentor in your corner.</h2>
+        <p>Drop the folder into a Claude project and bring it the client message before you hit send.</p>
+        <a class="button" href="https://github.com/l-conder/the-hold#readme">Open the mentor folder</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>The Hold - built for the moment before you hit send.</footer>
+
+  <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+  <script>
+    (function () {
+      var total = 19 * 60 + 58;
+      var el = document.getElementById("clock");
+      window.setInterval(function () {
+        total = Math.max(0, total - 1);
+        var min = Math.floor(total / 60);
+        var sec = total % 60;
+        el.textContent = String(min).padStart(2, "0") + ":" + String(sec).padStart(2, "0");
+      }, 1000);
+    }());
+  </script>
+</body>
+</html>

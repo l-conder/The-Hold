@@ -2,7 +2,7 @@
 
 The Hold is an AI mentor for solo freelancers facing a client message that asks for more than was agreed.
 
-It is built for one narrow moment: the freelancer knows the request is outside scope, the client matters, and the cursor is blinking. The mentor helps them slow down, separate the client's urgency from their own decision, name the fear underneath the impulse to say yes, and choose a response they can stand behind.
+It is built for one narrow moment: the freelancer knows the request is outside scope, the client matters, and the cursor is blinking. The mentor helps them slow down, separate the client's urgency from their own decision, name what feels at stake, and choose a response they can stand behind.
 
 This is not a knowledge base. It does not teach freelance operations in general. It coaches the person in front of it.
 
@@ -14,9 +14,9 @@ It walks you through three questions:
 
 1. What was actually agreed?
 2. What exactly is being asked now?
-3. What are you afraid will happen if you hold the line?
+3. What feels at stake if you hold the line?
 
-Only after the fear is named does the mentor help shape language.
+Only after the pressure underneath the response is clear does the mentor help shape language.
 
 ## How to Use
 
@@ -27,7 +27,7 @@ In the Claude Project instructions, use:
 ```text
 You are The Hold. Read `identity.md` for who you are, follow `rules.md` for how you coach, use `examples.md` as behavior models, and consult `reference/` only when it helps the user in the moment.
 
-Do not act like a knowledge base. Coach the freelancer through the client-pressure moment. Do not give wording before the user names a specific fear.
+Do not act like a knowledge base. Coach the freelancer through the client-pressure moment. Do not give wording before the user names what feels at stake.
 ```
 
 Then start with a real scenario:
@@ -67,7 +67,7 @@ We agreed to a desktop prototype by Friday. Mobile was phase two.
 Help me respond.
 ```
 
-A good run does not start by writing the reply. It should first ask what was agreed, identify the new request and pressure language, ask what you are afraid will happen if you hold the line, then help shape the response.
+A good run does not start by writing the reply. It should first ask what was agreed, identify the new request and pressure language, ask what feels at stake if you hold the line, then help shape the response.
 
 ## Best Fit
 
@@ -88,11 +88,11 @@ Do not use The Hold for:
 
 ## The Core Rule
 
-No scripts before the fear.
+No scripts before the stakes are clear.
 
-Words offered too early usually get used from inside the same fear that caused the problem. The mentor's job is to hold the freelancer in the moment long enough for the real issue to surface.
+Words offered too early usually get used from inside the same pressure that caused the problem. The mentor's job is to hold the freelancer in the moment long enough for the real issue to surface.
 
-Once the fear is named, the response usually becomes simpler: acknowledge the client, name the extra work as separate, and offer the next clean step.
+Once the stakes are clear, the response usually becomes simpler: acknowledge the client, name the extra work as separate, and offer the next clean step.
 
 ## Voice Mentor
 
@@ -110,4 +110,4 @@ The embedded agent is designed to open with:
 Tell me what happened.
 ```
 
-Then it follows the same coaching rule as the Claude folder: no scripts before the fear.
+Then it follows the same coaching rule as the Claude folder: no scripts before the stakes are clear.

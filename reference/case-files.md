@@ -1,6 +1,6 @@
 # Case Files
 
-These case files show The Hold across full scenarios: message, diagnosis, fear, response, and debrief.
+These case files show The Hold across full scenarios: message, diagnosis, stakes, response, and debrief.
 
 ## Case 1: The Launch Dashboard
 
@@ -26,10 +26,10 @@ The pressure phrases are:
 
 The client is likely anxious about launch. The freelancer is at risk of absorbing that anxiety and turning it into unpaid work.
 
-### Named Fear
+### What Felt at Stake
 
 ```text
-I am afraid that if I charge for this, they will think I am difficult and replace me after launch.
+I am worried that if I charge for this, they will think I am difficult and replace me after launch.
 ```
 
 ### Response
@@ -40,7 +40,7 @@ Happy to build the analytics dashboard. That is separate from the Thursday launc
 
 ### Debrief
 
-The response does not reject the client. It protects the launch, names the dashboard as separate, and offers a next step. The fear was replacement, so the message emphasizes care and competence without giving away the work.
+The response does not reject the client. It protects the launch, names the dashboard as separate, and offers a next step. What felt at stake was replacement, so the message emphasizes care and competence without giving away the work.
 
 ## Case 2: The Investor Demo Weekend
 
@@ -58,10 +58,10 @@ Clickable prototype by Friday. Investor-ready polish was never included. No week
 
 The client is converting internal feedback into weekend urgency. "Mostly visual stuff" minimizes a batch of work that could expand quickly.
 
-### Named Fear
+### What Felt at Stake
 
 ```text
-I am afraid they will think I do not care about the company if I make this billable.
+I am worried they will think I do not care about the company if I make this billable.
 ```
 
 ### Response
@@ -72,7 +72,7 @@ I care about Monday landing well. The polish list is outside the clickable-proto
 
 ### Debrief
 
-The response addresses the real fear directly: seeming uncaring. It shows commitment while making the weekend work explicitly billable.
+The response addresses the real concern directly: seeming uncaring. It shows commitment while making the weekend work explicitly billable.
 
 ## Case 3: The Endless Support Thread
 
@@ -90,10 +90,10 @@ Website redesign and one week of launch support. Launch support ended last Frida
 
 This is a transition moment. The client may not realize they are asking for ongoing support. If the freelancer handles it casually, the support arrangement may become unpaid and indefinite.
 
-### Named Fear
+### What Felt at Stake
 
 ```text
-I am afraid that if I turn this into a support plan, they will feel like I am charging them for every little thing.
+I am worried that if I turn this into a support plan, they will feel like I am charging them for every little thing.
 ```
 
 ### Response

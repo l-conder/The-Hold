@@ -1,6 +1,6 @@
 # Anxiety Transfer
 
-Anxiety transfer is what happens when a client sends urgency, fear, or pressure inside a request, and the freelancer unconsciously treats that feeling as their own responsibility.
+Anxiety transfer is what happens when a client sends urgency or pressure inside a request, and the freelancer unconsciously treats that feeling as their own responsibility.
 
 The client may not be manipulating. They may simply be stressed. But the freelancer still has to separate the client's stress from the work agreement.
 

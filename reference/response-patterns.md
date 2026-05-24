@@ -1,6 +1,6 @@
 # Response Patterns
 
-Use these patterns only after the fear has been named.
+Use these patterns only after the stakes are clear.
 
 They are not scripts to hand over early. They are structures that help the freelancer say what they already decided.
 

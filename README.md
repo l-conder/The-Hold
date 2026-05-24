@@ -53,7 +53,7 @@ The mentor will not immediately write the reply. That is intentional.
 - `examples.md`: model interactions showing what good coaching looks like
 - `reference/`: frameworks, drills, patterns, and case files
 - `index.html`: single-page site with ElevenLabs voice mentor embed
-- `elevenlabs/agent-config.md`: dashboard-ready voice agent configuration
+- `agent-config.md`: dashboard-ready voice agent configuration
 
 ## Quick Test
 
@@ -101,7 +101,7 @@ The site includes an embedded ElevenLabs voice mentor.
 To recreate or tune the voice agent, use:
 
 ```text
-elevenlabs/agent-config.md
+agent-config.md
 ```
 
 The embedded agent is designed to open with:
